@@ -37,7 +37,7 @@ const addingMoney = function (value) {
   totalAmount.innerText = amount;
 };
 
-// createing donation history
+// creating donation history
 const addDonationHistory = function (value, index) {
   historySection.querySelector("h3").classList.add("hidden");
   const donation = document.createElement("div");
@@ -52,6 +52,8 @@ const addDonationHistory = function (value, index) {
   donation.appendChild(details);
   donation.appendChild(time);
 };
+
+// checking input validation
 const checkValidation = function (input, index) {
   const value = parseInt(input);
   if (value > amount || isNaN(value) || value <= 0) {
@@ -83,6 +85,3 @@ closeModalBtn.addEventListener("click", function () {
     inputFields[i].value = "";
   }
 });
-
-const a =
-  inputFields[0].parentElement.parentElement.querySelector("h3").innerText;
