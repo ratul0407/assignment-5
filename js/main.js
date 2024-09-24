@@ -11,7 +11,6 @@ const donate = document.querySelector(".donate-btn");
 const history = document.querySelector(".history-btn");
 const historySection = document.querySelector(".history");
 const donationContainer = document.querySelector(".donation-container");
-console.log(historySection);
 
 // history button functionality
 history.addEventListener("click", function () {
@@ -60,7 +59,7 @@ const checkValidation = function (input, index) {
   } else {
     overlay.classList.remove("hidden");
     modal.classList.remove("hidden");
-
+    document.querySelector("body").classList.add("overflow-hidden");
     const fund = +donationAmount[index].innerText + value;
     donationAmount[index].innerText = fund;
     addingMoney(value);
@@ -72,7 +71,6 @@ for (let i = 0; i < donateBtns.length; i++) {
   donateBtns[i].addEventListener("click", function (e) {
     e.preventDefault();
     checkValidation(inputFields[i].value, i);
-    console.log(window.innerHeight);
   });
 }
 
@@ -80,7 +78,7 @@ for (let i = 0; i < donateBtns.length; i++) {
 closeModalBtn.addEventListener("click", function () {
   overlay.classList.add("hidden");
   modal.classList.add("hidden");
-
+  document.querySelector("body").classList.remove("overflow-hidden");
   for (let i = 0; i < inputFields.length; i++) {
     inputFields[i].value = "";
   }
@@ -88,5 +86,3 @@ closeModalBtn.addEventListener("click", function () {
 
 const a =
   inputFields[0].parentElement.parentElement.querySelector("h3").innerText;
-
-console.log(a.split("for"));

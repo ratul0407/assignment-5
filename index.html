@@ -21,18 +21,21 @@
   </head>
   <body class="lexend">
     <header class="bg-[#F9F7F3] sticky top-0">
-      <div class="container mx-auto pt-6 pb-16">
+      <div class="container mx-auto pt-3 lg:pt-6 pb-3 lg:pb-16">
         <nav>
-          <ul class="flex justify-between text-xl font-semibold">
-            <li class="bg-[#B4F461] px-8 flex items-center rounded-lg">
+          <ul class="flex justify-between text-xl font-semibold items-center">
+            <li class="bg-[#B4F461] px-8 py-3 flex items-center rounded-lg">
               <a href="blog.html">Blog</a>
             </li>
             <li>
-              <a href="#" class="flex items-center gap-4">
+              <a
+                href="#"
+                class="flex justify-center items-center gap-4 flex-col lg:flex-row"
+              >
                 <span>
                   <img src="images/logo.png" alt="" aria-hidden="true" />
                 </span>
-                <span>Donate Bangladesh</span>
+                <span class="text-center">Donate Bangladesh</span>
               </a>
             </li>
             <li>
@@ -224,7 +227,7 @@
     </main>
     <!-- modal window -->
     <section
-      class="modal | bg-white absolute inset-0 m-auto max-w-sm lg:max-w-xl space-y-6 py-12 rounded-xl h-fit text-center z-10 hidden"
+      class="modal | bg-white fixed inset-0 m-auto max-w-sm lg:max-w-xl space-y-6 py-12 rounded-xl h-fit text-center z-10 hidden"
     >
       <h3 class="font-semibold text-5xl">Congrats!</h3>
       <img class="mx-auto h-12" src="images/coin.png" alt="" />
