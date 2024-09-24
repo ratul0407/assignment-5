@@ -56,7 +56,7 @@ const addDonationHistory = function (value, index) {
 const checkValidation = function (input, index) {
   const value = parseInt(input);
   if (value > amount || isNaN(value) || value <= 0) {
-    alert("Invalid input");
+    alert("Invalid Donation Amount");
   } else {
     overlay.classList.remove("hidden");
     modal.classList.remove("hidden");
